@@ -1,0 +1,1049 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: adarkroom\n"
+"POT-Creation-Date: 2018-03-25 22:23+0800\n"
+"PO-Revision-Date: 2018-03-25 22:24+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ../../src\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: components/Craftables.js:9
+msgid "trap"
+msgstr "陷阱"
+
+#: components/Craftables.js:11
+msgid ""
+"builder says she can make traps to catch any creatures might still be alive "
+"out there"
+msgstr "建造者说她能够制做陷阱来捕捉那些仍在野外活动的野兽"
+
+#: components/Craftables.js:12
+msgid "more traps to catch more creatures"
+msgstr "陷阱越多，抓到的猎物就越多"
+
+#: components/Craftables.js:13
+msgid "more traps won't help now"
+msgstr "再增加陷阱已毫无裨益"
+
+#: components/Craftables.js:23
+msgid "cart"
+msgstr "货车"
+
+#: components/Craftables.js:26
+msgid "builder says she can make a cart for carrying wood"
+msgstr "建造者说她能够制造出货车，用来运载木头"
+
+#: components/Craftables.js:27
+msgid "the rickety cart will carry more wood from the forest"
+msgstr "摇摇晃晃的货车满载从森林运出的木头"
+
+#: components/Craftables.js:36
+msgid "hut"
+msgstr "小屋"
+
+#: components/Craftables.js:39
+msgid "builder says there are more wanderers. says they'll work, too."
+msgstr "建造者说这里有许多流浪者，他们也会来工作"
+
+#: components/Craftables.js:40
+msgid "builder puts up a hut, out in the forest. says word will get around."
+msgstr "建造者在林中建起一栋小屋，她说消息很快就会流传出去"
+
+#: components/Craftables.js:41
+msgid "no more room for huts."
+msgstr "再没有可以建小屋的空地了"
+
+#: components/Craftables.js:51
+msgid "lodge"
+msgstr "旅馆"
+
+#: components/Craftables.js:54
+msgid "villagers could help hunt, given the means"
+msgstr "假如工具齐备，村民也能帮忙狩猎"
+
+#: components/Craftables.js:55
+msgid "the hunting lodge stands in the forest, a ways out of town"
+msgstr "供猎人居住的旅馆已经矗立在林中，距离村子不远"
+
+#: components/Craftables.js:66
+msgid "trading post"
+msgstr "贸易站"
+
+#: components/Craftables.js:69
+msgid "a trading post would make commerce easier"
+msgstr "贸易站让贸易变得更加便捷"
+
+#: components/Craftables.js:70
+msgid ""
+"now the nomads have a place to set up shop, they might stick around a while"
+msgstr "现在游牧部落有地方安营扎寨设立商铺了，他们也许会多逗留一段时间"
+
+#: components/Craftables.js:80
+msgid "tannery"
+msgstr "制革屋"
+
+#: components/Craftables.js:83
+msgid "builder says leather could be useful. says the villagers could make it."
+msgstr "建造者说皮革会很有用，而且村民也会做"
+
+#: components/Craftables.js:84
+msgid "tannery goes up quick, on the edge of the village"
+msgstr "制革屋很快在村子一角建立了起来"
+
+#: components/Craftables.js:94
+msgid "smokehouse"
+msgstr "熏肉房"
+
+#: components/Craftables.js:97
+msgid ""
+"should cure the meat, or it'll spoil. builder says she can fix something up."
+msgstr "应该把肉熏一下，否则会腐坏掉.建造者说她能帮忙搞定这个"
+
+#: components/Craftables.js:98
+msgid "builder finishes the smokehouse. she looks hungry."
+msgstr "建造者造好了熏肉房，她看起来饥肠辘辘"
+
+#: components/Craftables.js:108
+msgid "workshop"
+msgstr "工坊"
+
+#: components/Craftables.js:111
+msgid "builder says she could make finer things, if she had the tools"
+msgstr "建造者说如果她有工具的话能做出一些更精良的东西"
+
+#: components/Craftables.js:112
+msgid "workshop's finally ready. builder's excited to get to it"
+msgstr "工坊终于建好了.建造者激动不已"
+
+#: components/Craftables.js:123
+msgid "steelworks"
+msgstr "炼钢坊"
+
+#: components/Craftables.js:126
+msgid "builder says the villagers could make steel, given the tools"
+msgstr "建造者说给村民工具的话他们就能帮忙炼钢"
+
+#: components/Craftables.js:127
+msgid "a haze falls over the village as the steelworks fires up"
+msgstr "炼钢坊开工后，一缕黑烟飘向村庄上空"
+
+#: components/Craftables.js:138
+msgid "armoury"
+msgstr "军械坊"
+
+#: components/Craftables.js:141
+msgid "builder says it'd be useful to have a steady source of bullets"
+msgstr "建造者说拥有稳定的弹药来源很有必要"
+
+#: components/Craftables.js:142
+msgid "armoury's done, welcoming back the weapons of the past."
+msgstr "军械坊建好了，欢迎使用这些过时的武器"
+
+#: components/Craftables.js:153 components/localization.js:27
+msgid "torch"
+msgstr "驱散黑暗的火把"
+
+#: components/Craftables.js:156
+msgid "a torch to keep the dark away"
+msgstr "水壶"
+
+#: components/Craftables.js:165
+msgid "waterskin"
+msgstr "水壶"
+
+#: components/Craftables.js:169
+msgid "this waterskin'll hold a bit of water, at least"
+msgstr "起码能装那么点儿水"
+
+#: components/Craftables.js:177
+msgid "cask"
+msgstr "水桶"
+
+#: components/Craftables.js:181
+msgid "the cask holds enough water for longer expeditions"
+msgstr "为更长的探索之旅提供充足的水源"
+
+#: components/Craftables.js:190
+msgid "water tank"
+msgstr "水罐"
+
+#: components/Craftables.js:194
+msgid "never go thirsty again"
+msgstr "再也不担心口渴"
+
+#: components/Craftables.js:203
+msgid "bone spear"
+msgstr "骨枪"
+
+#: components/Craftables.js:206
+msgid "this spear's not elegant, but it's pretty good at stabbing"
+msgstr "这柄标枪不怎么精致，但用来戳刺手感不错"
+
+#: components/Craftables.js:215
+msgid "rucksack"
+msgstr "双肩包"
+
+#: components/Craftables.js:219
+msgid "carrying more means longer expeditions to the wilds"
+msgstr "荒野旅行时携带更多物资"
+
+#: components/Craftables.js:227
+msgid "wagon"
+msgstr "篷车"
+
+#: components/Craftables.js:231
+msgid "the wagon can carry a lot of supplies"
+msgstr "篷车能够携带许多物资"
+
+#: components/Craftables.js:240
+msgid "convoy"
+msgstr "车队"
+
+#: components/Craftables.js:244
+msgid "the convoy can haul mostly everything"
+msgstr "车队几乎能把所有东西都装下"
+
+#: components/Craftables.js:254
+msgid "l armour"
+msgstr "皮甲"
+
+#: components/Craftables.js:257
+msgid "leather's not strong. better than rags, though."
+msgstr "皮革不算结实，但总比披块破布强吧"
+
+#: components/Craftables.js:266
+msgid "i armour"
+msgstr "铁甲"
+
+#: components/Craftables.js:269
+msgid "iron's stronger than leather"
+msgstr "铁可比皮结实"
+
+#: components/Craftables.js:278
+msgid "s armour"
+msgstr "钢甲"
+
+#: components/Craftables.js:281
+msgid "steel's stronger than iron"
+msgstr "钢的总比铁的强"
+
+#: components/Craftables.js:290
+msgid "iron sword"
+msgstr "铁剑"
+
+#: components/Craftables.js:293
+msgid "sword is sharp. good protection out in the wilds."
+msgstr "剑很锋利，能够在野外提供不错的防护"
+
+#: components/Craftables.js:303
+msgid "steel sword"
+msgstr "钢剑"
+
+#: components/Craftables.js:306
+msgid "the steel is strong, and the blade true."
+msgstr "好钢出利刃"
+
+#: components/Craftables.js:316
+msgid "rifle"
+msgstr "步枪"
+
+#: components/Craftables.js:318
+msgid "black powder and bullets, like the old days."
+msgstr "黑火药和子弹，就像过去那样"
+
+#: components/localization.js:3
+msgid "A Firelit Room"
+msgstr "生火间"
+
+#: components/localization.js:4
+msgid "A Raucous Village"
+msgstr "喧嚣小镇"
+
+#: components/localization.js:5
+msgid "A Large Village"
+msgstr "大型村落"
+
+#: components/localization.js:6
+msgid "A Modest Village"
+msgstr "中型村落"
+
+#: components/localization.js:7
+msgid "A Tiny Village"
+msgstr "小型村落"
+
+#: components/localization.js:8
+msgid "A Lonely Hut"
+msgstr "孤独小屋"
+
+#: components/localization.js:9
+msgid "A Silent Forest"
+msgstr "静谧森林"
+
+#: components/localization.js:10
+msgid "check traps"
+msgstr "查看陷阱"
+
+#: components/localization.js:11
+msgid "A Dusty Path"
+msgstr "漫漫尘途"
+
+#: components/localization.js:13
+msgid "wood"
+msgstr "木头"
+
+#: components/localization.js:14
+msgid "builder"
+msgstr "建造者"
+
+#: components/localization.js:15
+msgid "teeth"
+msgstr "牙齿"
+
+#: components/localization.js:16
+msgid "meat"
+msgstr "肉"
+
+#: components/localization.js:17
+msgid "fur"
+msgstr "毛皮"
+
+#: components/localization.js:18
+msgid "alien alloy"
+msgstr "外星合金"
+
+#: components/localization.js:19
+msgid "bullets"
+msgstr "子弹"
+
+#: components/localization.js:20
+msgid "charm"
+msgstr "符咒"
+
+#: components/localization.js:21
+msgid "leather"
+msgstr "皮革"
+
+#: components/localization.js:22
+msgid "iron"
+msgstr "铁"
+
+#: components/localization.js:23
+msgid "steel"
+msgstr "钢"
+
+#: components/localization.js:24
+msgid "coal"
+msgstr "煤"
+
+#: components/localization.js:25
+msgid "sulphur"
+msgstr "硫磺"
+
+#: components/localization.js:26
+msgid "energy cell"
+msgstr "能量元件"
+
+#: components/localization.js:28
+msgid "medicine"
+msgstr "药剂"
+
+#: components/localization.js:29 components/stores/Income.js:12
+msgid "hunter"
+msgstr "猎人"
+
+#: components/localization.js:30 components/stores/Income.js:20
+msgid "trapper"
+msgstr "陷阱师"
+
+#: components/localization.js:31 components/stores/Income.js:28
+msgid "tanner"
+msgstr "皮革师"
+
+#: components/localization.js:32
+msgid "grenade"
+msgstr "手雷"
+
+#: components/localization.js:33
+msgid "bolas"
+msgstr "套索"
+
+#: components/localization.js:34
+msgid "bayonet"
+msgstr "刺刀"
+
+#: components/localization.js:35 components/stores/Income.js:36
+msgid "charcutier"
+msgstr "熏肉师"
+
+#: components/localization.js:36 components/stores/Income.js:45
+msgid "iron miner"
+msgstr "铁矿工人"
+
+#: components/localization.js:37
+msgid "iron mine"
+msgstr "铁矿"
+
+#: components/localization.js:38 components/stores/Income.js:53
+msgid "coal miner"
+msgstr "煤矿工人"
+
+#: components/localization.js:39
+msgid "coal mine"
+msgstr "煤矿"
+
+#: components/localization.js:40 components/stores/Income.js:61
+msgid "sulphur miner"
+msgstr "硫磺矿工"
+
+#: components/localization.js:41
+msgid "sulphur mine"
+msgstr "硫磺矿"
+
+#: components/localization.js:42 components/stores/Income.js:78
+msgid "armourer"
+msgstr "军械工人"
+
+#: components/localization.js:43 components/stores/Income.js:69
+msgid "steelworker"
+msgstr "炼钢工人"
+
+#: components/localization.js:44
+msgid "bait"
+msgstr "诱饵"
+
+#: components/localization.js:45 components/localization.js:52
+msgid "cured meat"
+msgstr "熏肉"
+
+#: components/localization.js:46 components/localization.js:51
+msgid "scales"
+msgstr "鳞片"
+
+#: components/localization.js:47
+msgid "compass"
+msgstr "罗盘"
+
+#: components/localization.js:48
+msgid "laser rifle"
+msgstr "激光步枪"
+
+#: components/localization.js:49 components/stores/Income.js:5
+msgid "gatherer"
+msgstr "采集者"
+
+#: components/localization.js:50
+msgid "cloth"
+msgstr "布料"
+
+#: components/localization.js:53
+msgid "thieves"
+msgstr "小偷"
+
+#: components/localization.js:54
+msgid "not enough fur"
+msgstr "皮毛不够了"
+
+#: components/localization.js:55
+msgid "not enough wood"
+msgstr "木头不够了"
+
+#: components/localization.js:56
+msgid "not enough coal"
+msgstr "煤炭不够了"
+
+#: components/localization.js:57
+msgid "not enough iron"
+msgstr "铁不够了"
+
+#: components/localization.js:58
+msgid "not enough steel"
+msgstr "钢不够了"
+
+#: components/localization.js:59
+msgid "not enough sulphur"
+msgstr "硫磺不够了"
+
+#: components/localization.js:60
+msgid "baited trap"
+msgstr "上饵陷阱"
+
+#: components/localization.js:61
+msgid "not enough scales"
+msgstr "鳞片不够了"
+
+#: components/localization.js:62
+msgid "not enough cloth"
+msgstr "布料不够了"
+
+#: components/localization.js:63
+msgid "not enough teeth"
+msgstr "牙齿不够了"
+
+#: components/localization.js:64
+msgid "not enough leather"
+msgstr "皮革不够了"
+
+#: components/localization.js:65
+msgid "not enough meat"
+msgstr "肉不够了"
+
+#: components/localization.js:66
+msgid "the compass points east"
+msgstr "罗盘指向东方"
+
+#: components/localization.js:67
+msgid "the compass points west"
+msgstr "罗盘指向西方"
+
+#: components/localization.js:68
+msgid "the compass points north"
+msgstr "罗盘指向北方"
+
+#: components/localization.js:69
+msgid "the compass points south"
+msgstr "罗盘指向南方"
+
+#: components/localization.js:70
+msgid "the compass points northeast"
+msgstr "罗盘指向东北"
+
+#: components/localization.js:71
+msgid "the compass points northwest"
+msgstr "罗盘指向西北"
+
+#: components/localization.js:72
+msgid "the compass points southeast"
+msgstr "罗盘指向东南"
+
+#: components/localization.js:73
+msgid "the compass points southwest"
+msgstr "罗盘指向西南"
+
+#: components/localization.js:75
+msgid "village"
+msgstr "村落"
+
+#: components/localization.js:76
+msgid "forest"
+msgstr "树林"
+
+#: components/localization.js:77
+msgid "population"
+msgstr "人口"
+
+#: components/localization.js:79
+msgid "dry brush and dead branches litter the forest floor"
+msgstr "林地上散落着枯枝败叶"
+
+#: components/localization.js:80
+msgid "the traps contain"
+msgstr "陷阱捕获到"
+
+#: components/localization.js:81
+msgid " and "
+msgstr "以及"
+
+#: components/localization.js:82
+msgid "a stranger arrives in the night"
+msgstr "陌生人在夜里抵达"
+
+#: components/localization.js:83
+msgid "a weathered family takes up in one of the huts."
+msgstr "一户饱经风雨的人家住进一栋小屋"
+
+#: components/localization.js:84
+msgid "a small group arrives, all dust and bones."
+msgstr "一群瘦骨嶙峋，风尘仆仆的人抵达了"
+
+#: components/localization.js:85
+msgid "a convoy lurches in, equal parts worry and hope."
+msgstr "车队历经磨难来到了小镇，怀着和担忧同等的希望"
+
+#: components/localization.js:86
+msgid "the town's booming. word does get around."
+msgstr "镇子繁荣热闹，消息不胫而走"
+
+#: components/localization.js:88
+msgid "dead"
+msgstr "熄灭了"
+
+#: components/localization.js:89
+msgid "smoldering"
+msgstr "开始冒烟"
+
+#: components/localization.js:90
+msgid "flickering"
+msgstr "冒出火苗"
+
+#: components/localization.js:91
+msgid "burning"
+msgstr "燃烧着"
+
+#: components/localization.js:92
+msgid "roaring"
+msgstr "熊熊燃烧"
+
+#: components/localization.js:93
+msgid "freezing"
+msgstr "寒冷刺骨"
+
+#: components/localization.js:94
+msgid "cold"
+msgstr "很冷"
+
+#: components/localization.js:95
+msgid "mild"
+msgstr "很宜人"
+
+#: components/localization.js:96
+msgid "warm"
+msgstr "暖和"
+
+#: components/localization.js:97
+msgid "hot"
+msgstr "很热"
+
+#: components/localization.js:98
+msgid "builder just shivers"
+msgstr "建造者还在瑟瑟发抖"
+
+#: components/localization.js:99
+msgid "the wood has run out"
+msgstr "木头用光了"
+
+#: components/localization.js:100
+msgid ""
+"the stranger shivers, and mumbles quietly. her words are unintelligible."
+msgstr "陌生人瑟瑟发抖，呢喃不已，听不清在说些什么"
+
+#: components/localization.js:101
+msgid "a ragged stranger stumbles through the door and collapses in the corner"
+msgstr "衣衫褴褛的陌生人步履蹒跚地步入门来，瘫倒在角落里"
+
+#: components/localization.js:102
+msgid "the stranger in the corner stops shivering. her breathing calms."
+msgstr "角落里的陌生人不再颤抖了，她的呼吸平静了下来"
+
+#: components/localization.js:103
+msgid "the wind howls outside"
+msgstr "屋外寒风呼啸"
+
+#: components/localization.js:104
+msgid "the wood is running out"
+msgstr "木头就快烧完了"
+
+#: components/localization.js:105
+msgid "the light from the fire spills from the windows, out into the dark"
+msgstr "火光映出窗外，投入黑暗之中"
+
+#: components/localization.js:106
+msgid "the fire is {0}"
+msgstr "火堆{0}"
+
+#: components/localization.js:107
+msgid "the room is {0}"
+msgstr "房间{0}"
+
+#: components/localization.js:108
+msgid "the traps contain "
+msgstr "陷阱捕获到"
+
+#: components/stores/TrapDrops.js:7
+msgid "scraps of fur"
+msgstr "皮毛碎片"
+
+#: components/stores/TrapDrops.js:12
+msgid "bits of meat"
+msgstr "小片肉"
+
+#: components/stores/TrapDrops.js:17
+msgid "strange scales"
+msgstr "古怪鳞片"
+
+#: components/stores/TrapDrops.js:22
+msgid "scattered teeth"
+msgstr "残缺牙齿"
+
+#: components/stores/TrapDrops.js:27
+msgid "tattered cloth"
+msgstr "破烂布料"
+
+#: components/stores/TrapDrops.js:32
+msgid "a crudely made charm"
+msgstr "做工粗糙的符咒"
+
+#: events/room.js:11
+msgid "The Nomad"
+msgstr "游牧部落"
+
+#: events/room.js:18
+msgid ""
+"a nomad shuffles into view, laden with makeshift bags bound with rough twine."
+msgstr "游牧部落慢吞吞地出现在视野中，带着许多用粗麻线扎起来的临时口袋"
+
+#: events/room.js:19
+msgid "won't say from where he came, but it's clear that he's not staying."
+msgstr "他们没有提及来处，但显然不会逗留很久"
+
+#: events/room.js:21
+msgid "a nomad arrives, looking to trade"
+msgstr "游牧部落抵达，想要进行贸易"
+
+#: events/room.js:25
+msgid "buy scales"
+msgstr "购买鳞片"
+
+#: events/room.js:30
+msgid "buy teeth"
+msgstr "购买牙齿"
+
+#: events/room.js:35
+msgid "buy bait"
+msgstr "购买诱饵"
+
+#: events/room.js:38
+msgid "traps are more effective with bait."
+msgstr "traps are more effective with bait."
+
+#: events/room.js:44
+msgid "buy compass"
+msgstr "购买罗盘"
+
+#: events/room.js:47
+msgid "the old compass is dented and dusty, but it looks to work."
+msgstr "这块旧罗盘破损蒙尘，但看起来还能用"
+
+#: events/room.js:50 events/room.js:232 events/room.js:245 events/room.js:258
+#: events/room.js:286 events/room.js:372 events/room.js:395 events/room.js:451
+#: events/room.js:474 events/room.js:516 events/room.js:634 events/room.js:650
+#: events/room.js:666 events/room.js:677
+msgid "say goodbye"
+msgstr "道别"
+
+#: events/room.js:58 events/room.js:109
+msgid "Noises"
+msgstr "嘈杂"
+
+#: events/room.js:65
+msgid "through the walls, shuffling noises can be heard."
+msgstr "嘈杂声透墙传来"
+
+#: events/room.js:66
+msgid "can't tell what they're up to."
+msgstr "难以分辨来源"
+
+#: events/room.js:68
+msgid "strange noises can be heard through the walls"
+msgstr "古怪的声响透过墙壁传来"
+
+#: events/room.js:72 events/room.js:123
+msgid "investigate"
+msgstr "调查"
+
+#: events/room.js:76 events/room.js:127
+msgid "ignore them"
+msgstr "忽略"
+
+#: events/room.js:83
+msgid "vague shapes move, just out of sight."
+msgstr "模糊的身影掠过，消失在视野外"
+
+#: events/room.js:84
+msgid "the sounds stop."
+msgstr "安静下来了"
+
+#: events/room.js:88 events/room.js:101
+msgid "go back inside"
+msgstr "回屋"
+
+#: events/room.js:96
+msgid ""
+"a bundle of sticks lies just beyond the threshold, wrapped in coarse furs."
+msgstr "一捆用粗糙的毛皮扎起来的柴火斜倚在门槛上"
+
+#: events/room.js:97
+msgid "the night is silent."
+msgstr "黑夜重归静谧"
+
+#: events/room.js:116
+msgid "scratching noises can be heard from the store room."
+msgstr "仓库里传出悉悉索索的声音"
+
+#: events/room.js:117
+msgid "something's in there."
+msgstr "有什么在那里"
+
+#: events/room.js:119
+msgid "something's in the store room"
+msgstr "不速之客闯入了仓库"
+
+#: events/room.js:134 events/room.js:154 events/room.js:174
+msgid "some wood is missing."
+msgstr "有些木头不见了"
+
+#: events/room.js:135
+msgid "the ground is littered with small scales"
+msgstr "地上散落着小鳞片"
+
+#: events/room.js:147 events/room.js:167 events/room.js:187
+msgid "leave"
+msgstr "离开"
+
+#: events/room.js:155
+msgid "the ground is littered with small teeth"
+msgstr "地上散落着小牙齿"
+
+#: events/room.js:175
+msgid "the ground is littered with scraps of cloth"
+msgstr "地上散落着布片"
+
+#: events/room.js:195
+msgid "The Beggar"
+msgstr "乞丐"
+
+#: events/room.js:202
+msgid "a beggar arrives."
+msgstr "乞丐徘徊在门前"
+
+#: events/room.js:203
+msgid "asks for any spare furs to keep him warm at night."
+msgstr "祈求能施舍给他一些多余的毛皮，好让他不在夜里受冻"
+
+#: events/room.js:205
+msgid "a beggar arrives"
+msgstr "乞丐来了"
+
+#: events/room.js:209
+msgid "give 50"
+msgstr "给50"
+
+#: events/room.js:214 events/room.js:339 events/room.js:418
+msgid "give 100"
+msgstr "给100"
+
+#: events/room.js:219 events/room.js:349 events/room.js:548
+msgid "turn him away"
+msgstr "撵走他"
+
+#: events/room.js:227 events/room.js:240 events/room.js:253
+msgid "the beggar expresses his thanks."
+msgstr "乞丐感激涕零"
+
+#: events/room.js:228
+msgid "leaves a pile of small scales behind."
+msgstr "留给我们一堆小鳞片"
+
+#: events/room.js:241
+msgid "leaves a pile of small teeth behind."
+msgstr "留给我们一堆小牙齿"
+
+#: events/room.js:254
+msgid "leaves some scraps of cloth behind."
+msgstr "留给我们一些布料"
+
+#: events/room.js:266
+msgid "The Shady Builder"
+msgstr ""
+
+#: events/room.js:275 events/room.js:278
+msgid "a shady builder passes through"
+msgstr ""
+
+#: events/room.js:276
+msgid "says he can build you a hut for less wood"
+msgstr ""
+
+#: events/room.js:281
+msgid "300 wood"
+msgstr ""
+
+#: events/room.js:293 events/room.js:295
+msgid "the shady builder has made off with your wood"
+msgstr ""
+
+#: events/room.js:298 events/room.js:316
+msgid "go home"
+msgstr "返回"
+
+#: events/room.js:305 events/room.js:307
+msgid "the shady builder builds a hut"
+msgstr ""
+
+#: events/room.js:325 events/room.js:404
+msgid "The Mysterious Wanderer"
+msgstr "神秘流浪者"
+
+#: events/room.js:332
+msgid ""
+"a wanderer arrives with an empty cart. says if he leaves with wood, he'll be "
+"back with more."
+msgstr "一名流浪者推着货车来到村子，声称如果让他带着木头离开，他会带回更多木头"
+
+#: events/room.js:333
+msgid "builder's not sure he's to be trusted."
+msgstr "建造者不确定能否信任他"
+
+#: events/room.js:335 events/room.js:414
+msgid "a mysterious wanderer arrives"
+msgstr "神秘流浪者来了"
+
+#: events/room.js:344 events/room.js:423
+msgid "give 500"
+msgstr "给500"
+
+#: events/room.js:356 events/room.js:379
+msgid "the wanderer leaves, cart loaded with wood"
+msgstr "流浪者带着满载木头的货车离开了"
+
+#: events/room.js:362 events/room.js:385
+msgid "the mysterious wanderer returns, cart piled high with wood."
+msgstr "神秘的流浪者回来了，货车上木头堆得更高了"
+
+#: events/room.js:411
+msgid ""
+"a wanderer arrives with an empty cart. says if she leaves with furs, she'll "
+"be back with more."
+msgstr "一名流浪者推着货车来到村子，声称如果让她带着毛皮离开，她会带回更多毛皮"
+
+#: events/room.js:412
+msgid "builder's not sure she's to be trusted."
+msgstr "建造者不确定能否信任她"
+
+#: events/room.js:428
+msgid "turn her away"
+msgstr "撵走她"
+
+#: events/room.js:435 events/room.js:458
+msgid "the wanderer leaves, cart loaded with furs"
+msgstr "流浪者带着满载毛皮的货车离开了"
+
+#: events/room.js:441 events/room.js:464
+msgid "the mysterious wanderer returns, cart piled high with furs."
+msgstr "神秘的流浪者回来了，货车上毛皮堆得更高了"
+
+#: events/room.js:483
+msgid "The Scout"
+msgstr "侦察兵"
+
+#: events/room.js:490
+msgid "the scout says she's been all over."
+msgstr "侦察兵说她曾环游世界"
+
+#: events/room.js:491
+msgid "willing to talk about it, for a price."
+msgstr "她愿意为我们分享她的经历，只需提供一些报酬"
+
+#: events/room.js:493
+msgid "a scout stops for the night"
+msgstr "侦察兵夜宿于此"
+
+#: events/room.js:497
+msgid "buy map"
+msgstr "购买地图"
+
+#: events/room.js:502
+msgid "the map uncovers a bit of the world"
+msgstr "地图上已探知的地方扩大了一点"
+
+#: events/room.js:506
+msgid "learn scouting"
+msgstr "学习侦察"
+
+#: events/room.js:525
+msgid "The Master"
+msgstr "宗师"
+
+#: events/room.js:532
+msgid "an old wanderer arrives."
+msgstr "一名年迈的流浪者抵达了"
+
+#: events/room.js:533
+msgid "he smiles warmly and asks for lodgings for the night."
+msgstr "他面带和煦的微笑，请求留宿一晚"
+
+#: events/room.js:535
+msgid "an old wanderer arrives"
+msgstr "年迈的流浪者出现了"
+
+#: events/room.js:539
+msgid "agree"
+msgstr "同意老人的请求"
+
+#: events/room.js:555
+msgid "in exchange, the wanderer offers his wisdom."
+msgstr "作为回报，流浪者为我们分享了他的智慧"
+
+#: events/room.js:559
+msgid "evasion"
+msgstr "避实就虚"
+
+#: events/room.js:569
+msgid "precision"
+msgstr "精密"
+
+#: events/room.js:579
+msgid "force"
+msgstr "野蛮人"
+
+#: events/room.js:589
+msgid "nothing"
+msgstr "一无所获"
+
+#: events/room.js:598
+msgid "The Sick Man"
+msgstr "患病男子"
+
+#: events/room.js:605
+msgid "a man hobbles up, coughing."
+msgstr "男子咳嗽着，一瘸一拐地走了过来"
+
+#: events/room.js:606
+msgid "he begs for medicine."
+msgstr "他祈求分给他一支药剂"
+
+#: events/room.js:608
+msgid "a sick man hobbles up"
+msgstr "患病男子一瘸一拐地走了过来"
+
+#: events/room.js:612
+msgid "give 1 medicine"
+msgstr "分给他一支药剂"
+
+#: events/room.js:614
+msgid "the man swallows the medicine eagerly"
+msgstr "男子迫不及待咽下了药剂"
+
+#: events/room.js:618
+msgid "tell him to leave"
+msgstr "请他离开"
+
+#: events/room.js:625 events/room.js:641 events/room.js:657
+msgid "the man is thankful."
+msgstr "男子感激涕零"
+
+#: events/room.js:626 events/room.js:642 events/room.js:658
+msgid "he leaves a reward."
+msgstr "他留下报酬走了"
+
+#: events/room.js:627
+msgid "some weird metal he picked up on his travels."
+msgstr "那是他在旅途中捡到的一些古怪的金属"
+
+#: events/room.js:643
+msgid "some weird glowing boxes he picked up on his travels."
+msgstr "那是他在旅途中捡到的一些古怪的发光盒子"
+
+#: events/room.js:659
+msgid "all he has are some scales."
+msgstr "全是些鳞片"
+
+#: events/room.js:673
+msgid "the man expresses his thanks and hobbles off."
+msgstr "男子表达了他的谢意，一瘸一拐地离开了"
