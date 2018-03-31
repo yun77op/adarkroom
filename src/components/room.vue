@@ -7,7 +7,13 @@
             <h1 class="section-heading">建筑物</h1>
             <div class="section-body">
                 <list-item v-on:infoClick="infoClick(key)" v-on:click="build(key)" v-if="CraftablesVisible[key]" v-for="(item, key) of Craftables" :key="key" :text="_(item.name)"></list-item>
-                <list-item v-on:infoClick="infoClick(key4)" v-on:click="build(key4)" v-if="TradeGoodsVisible[key4]" v-for="(item, key4) of TradeGoods" :key="key4" :text="_(item.name)"></list-item>
+            </div>
+        </div>
+
+        <div class="section" v-if="tradingPostVisible">
+            <h1 class="section-heading">贸易站</h1>
+            <div class="section-body">
+              <list-item v-on:infoClick="infoClick(key4)" v-on:click="buy(key4)" v-if="TradeGoodsVisible[key4]" v-for="(item, key4) of TradeGoods" :key="key4" :text="_(key4)"></list-item>
             </div>
         </div>
 
@@ -135,10 +141,13 @@ props: ['currentTab'],
   },
 
   watch: {
-      currentTab(newValue, oldValue) {
+      currentTab: {
+        handler(newValue, oldValue) {
           if (newValue === 0) {
               this.onArrival();
           }
+        },
+        immediate: true
       },
       temperature(newValue) {
         if (store.state.currentTab !== 0) {
@@ -170,18 +179,23 @@ props: ['currentTab'],
             specials: {},
 
             zanDialog: {},
-            show: false
+            show: false,
+
+            CraftablesVisibleCache: {}
         }
     },
 
     computed: {
+        tradingPostVisible() {
+          return this.buildings["trading post"] > 0;
+        },
 
         TradeGoodsVisible() {
             const obj = {};
 
             Object.keys(TradeGoods).forEach((thing) => {
                 if(this.buildings["trading post"] > 0) {
-                    if(thing == 'compass' || this.stores[thing] != 'undefined') {
+                    if(thing == 'compass' || typeof this.stores[thing] != 'undefined') {
                         // Allow the purchase of stuff once you've seen it
                         obj[thing] = true;
                     } else {
@@ -199,6 +213,11 @@ props: ['currentTab'],
             Object.keys(Craftables).forEach((name) => {
                 const craftable = this.Craftables[name];
                 let cost = craftable.cost(store.state);
+
+                if (this.CraftablesVisibleCache[name]) {
+                    obj[name] = true;
+                    return
+                }
 
                 if (this.buildings[name] > 0) {
                     obj[name] = true;
@@ -228,6 +247,7 @@ props: ['currentTab'],
                 }
 
                 obj[name] = true;
+                this.CraftablesVisibleCache[name] = true;
             })
             return obj;
         },
@@ -263,6 +283,8 @@ props: ['currentTab'],
         setTimeout(this.adjustTemp, ROOM_WARM_DELAY);
         setTimeout(this.coolFire, FIRE_COOL_DELAY);
 
+    // console.log(this.$store)
+
         this.setupCollectIncomeTimer()
 
         if (this.builderState >= 0 && this.builderState < 3) {
@@ -288,12 +310,12 @@ props: ['currentTab'],
         handleStoresChange,
 
         needsWorkshop: function(type) {
-		    return type == 'weapon' || type == 'upgrade' || type =='tool';
+		      return type == 'weapon' || type == 'upgrade' || type =='tool';
         },
 
 
         infoClick(thing) {
-            const craftable = Craftables[thing]
+            const craftable = Craftables[thing] || TradeGoods[thing]
             const cost = craftable.cost()
             const content = []
 
@@ -302,7 +324,7 @@ props: ['currentTab'],
             }
 
             this.zanDialog = {
-                title: _(craftable.name),
+                title: craftable.name ? _(craftable.name) : _(thing),
                 content,
                 buttons: [
                     {
@@ -315,10 +337,36 @@ props: ['currentTab'],
             this.show = true
         },
 
+        buy: function(thing) {
+          const good = TradeGoods[thing];
+          let numThings = this.stores[thing] || 0;
+          if(numThings < 0) numThings = 0;
+          if(good.maximum <= numThings) {
+            return;
+          }
+
+          const storeMod = {};
+          const cost = good.cost();
+          for(const k in cost) {
+            const have = this.stores[k] || 0;
+            if(have < cost[k]) {
+              this.toast(0, _("not enough " + k));
+              return false;
+            } else {
+              storeMod[k] = have - cost[k];
+            }
+          }
+
+          actions.setStoreM(storeMod);
+          this.toast(0, '购买成功');
+          actions.changeValue('stores.' + thing, 1)
+        },
+
+
         build(thing) {
 
             if (this.temperature <= TempEnum.Cold.value) {
-			    this.toast(0, _("builder just shivers"))
+			          this.toast(0, _("builder just shivers"))
                 return
             }
 
@@ -330,7 +378,7 @@ props: ['currentTab'],
             case 'weapon':
             case 'tool':
             case 'upgrade':
-                // numThings = $SM.get('stores["'+thing+'"]', true);
+                numThings = this.stores[thing] || 0
                 break;
             case 'building':
                 numThings = this.buildings[thing] || 0
@@ -387,7 +435,7 @@ props: ['currentTab'],
             const theme = this.temperature >= TempEnum.Warm.value ? 'warm' : 'cold';
 
             store.commit('changeTheme', theme);
-            
+
             if (this.builderState === 3) {
                 this.changeValue('builderState', 1)
 

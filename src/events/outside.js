@@ -81,7 +81,7 @@ const Events = [
 				notification: _('a fire has started'),
 				blink: true,
 				onLoad: function() {
-					actions.destroyHuts(1);
+					actions.setValue('destroyHutsNum', 1)
 				},
 				buttons: {
 					'mourn': {
@@ -139,7 +139,7 @@ const Events = [
 				notification: _('sufferers are left to die'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * Math.floor((store.state.population || 0)/2)) + 1;
-					Outside.killVillagers(numKilled);
+					actions.setValue('killVillagersNum', numKilled)
 				},
 				buttons: {
 					'end': {
@@ -192,7 +192,7 @@ const Events = [
 				notification: _('epidemic is eradicated eventually'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 5) + 2;
-					Outside.killVillagers(numKilled);
+					actions.setValue('killVillagersNum', numKilled)
 				},
 				buttons: {
 					'end': {
@@ -210,7 +210,7 @@ const Events = [
 				notification: _('population is almost exterminated'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 80) + 10;
-					Outside.killVillagers(numKilled);
+					actions.setValue('killVillagersNum', numKilled)
 				},
 				buttons: {
 					'end': {
@@ -237,7 +237,7 @@ const Events = [
 				notification: _('wild beasts attack the villagers'),
 				onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 10) + 1;
-					Outside.killVillagers(numKilled);
+					actions.setValue('killVillagersNum', numKilled)
 				},
 				reward: {
 					fur: 100,

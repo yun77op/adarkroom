@@ -1,8 +1,5 @@
 import store from '@/store'
-
-const _ = (text) => {
-    return text
-}
+import {_} from '@/components/translate'
 
 const Craftables = {
     'trap': {

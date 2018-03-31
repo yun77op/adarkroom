@@ -5,7 +5,9 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const initialState = wx.getStorageSync('game') || {
+// wx.getStorageSync('game')
+
+const initialState = {
   currentTab: 0,
   buildings: {
   },
@@ -21,11 +23,17 @@ const initialState = wx.getStorageSync('game') || {
   theme: 'cold',
   stores: {
   },
+  stolen: {
+
+  },
   message: null,
   builderState: -1,
   fire: 0,
   temperature: 0,
-  level: 0
+  level: 0,
+  killVillagersNum: -1,
+  destroyHutsNum: -1,
+  bootstraping: true
 }
 
 const notifyQueue = {
@@ -191,7 +199,28 @@ const store = new Vuex.Store({
       });
     },
 
-    collectIncome ({commit, state}) {
+    addStolen (args, stores) {
+      const {commit, state} = args;
+      for(let k in stores) {
+          var old = state.stores[k] || 0;
+          var short = old + stores[k];
+          //if they would steal more than actually owned
+          if(short < 0){
+            commit('changeValue', {
+              name: 'stolen.' + k,
+              value: (stores[k] * -1) + short
+            })
+          } else {
+            commit('changeValue', {
+              name: 'stolen.' + k,
+              value: stores[k] * -1
+            })
+          }
+      }
+    },
+
+    collectIncome (args) {
+      const {commit, state} = args;
 
       for (let source in state.income) {
         let income = state.income[source]
@@ -210,6 +239,8 @@ const store = new Vuex.Store({
 
 					let cost = income.stores
           let ok = true
+
+					if(source == 'thieves') this.addStolen(args, cost);
 
 					if (source !== 'thieves') {
 						for (let k in cost) {

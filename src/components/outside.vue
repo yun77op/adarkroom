@@ -2,9 +2,11 @@
     <div>
         <div class="list">
             <div class="list-item">
-                <tbutton text="伐木" @click="gatherWood()" activeColor="#66BC5C"></tbutton>
+                <tbutton text="伐木" @click="gatherWood" activeColor="#66BC5C"></tbutton>
             </div>
-            <button class="flat-button list-item" type="button" @click="checkTraps" v-if="trapsVisible">{{i18nCheckTraps}}</button>
+            <div class="list-item" v-if="trapsVisible">
+                <tbutton :text="_('check traps')" @click="checkTraps" activeColor="#66BC5C"></tbutton>
+            </div>
         </div>
         <div class="section" v-if="buildings.hut > 0">
             <h1 class="section-heading">{{populationSectionName}}</h1>
@@ -68,8 +70,7 @@ export default {
 
     data() {
         return {
-            Income,
-            i18nCheckTraps: _('check traps')
+            Income
         }
     },
 
@@ -141,6 +142,19 @@ export default {
     },
 
     watch: {
+        destroyHutsNum(num) {
+            if (num < 0) return;
+
+            this.destroyHuts(num)
+            actions.setValue('destroyHutsNum', -1)
+        },
+
+        killVillagersNum(num) {
+            if (num < 0) return;
+
+            this.killVillagers(num)
+            actions.setValue('killVillagersNum', -1)
+        },
 
         stores: {
             handler: function(newValue) {
@@ -161,7 +175,7 @@ export default {
 
         buildings: {
             handler(newValue, oldValue) {
-                if (newValue.hut > 0) {
+                if (newValue.hut > 0 && !this._popTimeout) {
                     this.schedulePopIncrease();
                 }
 
@@ -243,27 +257,63 @@ export default {
             this.changeValue('stores.wood', gatherAmount)
         },
 
-        // killVillagers: function(num) {
-        //     const delta = this.population >= num ? num : this.population
+        destroyHuts (num, allowEmpty) {
+            var dead = 0;
+            for(var i = 0; i < num; i++){
+                var population = this.population;
+                var rate = population / _HUT_ROOM;
+                var full = Math.floor(rate);
+                // by default this is used to destroy full or half-full huts
+                // pass allowEmpty to include empty huts in the armageddon
+                var huts = (allowEmpty) ? (store.state.buildings.hut || 0) : Math.ceil(rate);
+                if(!huts) {
+                    break;
+                }
+                // random can be 0 but not 1; however, 0 as a target is useless
+                var target = Math.floor(Math.random() * huts) + 1;
+                var inhabitants = 0;
+                if(target <= full){
+                    inhabitants = _HUT_ROOM;
+                } else if(target == full + 1){
+                    inhabitants = population % _HUT_ROOM;
+                }
 
-        //     actions.changeValue('population', delta * -1)
+                this.changeValue('buildings.hut', -1)
 
-        //     var remaining = Outside.getNumGatherers();
+                if(inhabitants){
+                    this.killVillagers(inhabitants);
+                    dead += inhabitants;
+                }
+            }
+            // this method returns the total number of victims, for further actions
+            return dead;
+        },
 
-        //     if(remaining < 0) {
-        //         var gap = -remaining;
-        //         for(var k in $SM.get('game.workers')) {
-        //             var numWorkers = $SM.get('game.workers["'+k+'"]');
-        //             if(numWorkers < gap) {
-        //                 gap -= numWorkers;
-        //                 $SM.set('game.workers["'+k+'"]', 0);
-        //             } else {
-        //                 $SM.add('game.workers["'+k+'"]', gap * -1);
-        //                 break;
-        //             }
-        //         }
-        //     }
-        // },
+        killVillagers: function(num) {
+            const delta = this.population >= num ? num : this.population
+
+            actions.changeValue('population', delta * -1)
+
+            const remaining = this.workers.gatherer
+
+            if(remaining < 0) {
+                let gap = -remaining;
+                for(let k in this.workers) {
+                    if (k === 'gatherer') {
+                        continue;
+                    }
+
+                    var numWorkers = this.workers[k];
+                    if(numWorkers < gap) {
+                        gap -= numWorkers;
+                        actions.setValue('workers.' + k, 0);
+                    } else {
+                        actions.changeValue('workers' + k, gap * -1);
+                        break;
+                    }
+                }
+            }
+        },
 
         checkTraps() {
             var drops = {};
@@ -297,7 +347,7 @@ export default {
                 }
                 s += msg[l];
             }
-            
+
             var baitUsed = numBait < numTraps ? numBait : numTraps;
             drops['bait'] = -baitUsed;
 
@@ -316,13 +366,13 @@ export default {
                 'steelworks': ['steelworker'],
                 'armoury' : ['armourer']
             };
-            
+
             var jobs = jobMap[name];
             if(typeof jobs == 'object') {
                 for(var i = 0, len = jobs.length; i < len; i++) {
                     var job = jobs[i];
                     if(typeof buildings[name] == 'number' &&
-                            buildings[name] > 0 && 
+                            buildings[name] > 0 &&
                             typeof this.workers[job] != 'number') {
                         console.log('adding ' + job + ' to the workers list');
                         actions.setValue('workers.'+job, 0);
@@ -358,7 +408,7 @@ export default {
             console.log('next population increase scheduled in ' + nextIncrease + ' minutes');
             this._popTimeout = setTimeout(this.increasePopulation, nextIncrease * 60 * 1000);
         }
-    }, 
+    },
     // mapActions([
     //         'modifyStore',
     //         'toast'

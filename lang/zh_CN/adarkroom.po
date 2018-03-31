@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: adarkroom\n"
-"POT-Creation-Date: 2018-03-25 22:23+0800\n"
-"PO-Revision-Date: 2018-03-25 22:24+0800\n"
+"POT-Creation-Date: 2018-03-27 12:43+0800\n"
+"PO-Revision-Date: 2018-03-27 12:50+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -148,11 +148,11 @@ msgstr "军械坊建好了，欢迎使用这些过时的武器"
 
 #: components/Craftables.js:153 components/localization.js:27
 msgid "torch"
-msgstr "驱散黑暗的火把"
+msgstr "火把"
 
 #: components/Craftables.js:156
 msgid "a torch to keep the dark away"
-msgstr "水壶"
+msgstr "驱散黑暗的火把"
 
 #: components/Craftables.js:165
 msgid "waterskin"
@@ -679,6 +679,283 @@ msgstr "破烂布料"
 msgid "a crudely made charm"
 msgstr "做工粗糙的符咒"
 
+#: events/global.js:10
+msgid "The Thief"
+msgstr "小偷"
+
+#: events/global.js:17
+msgid "the villagers haul a filthy man out of the store room."
+msgstr "村民们从仓库里拽出来一个脏兮兮的家伙"
+
+#: events/global.js:18
+msgid "say his folk have been skimming the supplies."
+msgstr "据说他的同伙们早已经顺走许多货物"
+
+#: events/global.js:19
+msgid "say he should be strung up as an example."
+msgstr "他们说应该绞死他以儆效尤"
+
+#: events/global.js:21
+msgid "a thief is caught"
+msgstr "抓到一名小偷"
+
+#: events/global.js:25
+msgid "hang him"
+msgstr "绞死他"
+
+#: events/global.js:29
+msgid "spare him"
+msgstr "释放他"
+
+#: events/global.js:36
+msgid "the villagers hang the thief high in front of the store room."
+msgstr "村民们将盗贼绞死，高挂在仓库门前"
+
+#: events/global.js:37
+msgid ""
+"the point is made. in the next few days, the missing supplies are returned."
+msgstr "此举卓有成效.数日后,遗失的物资都被还了回来"
+
+#: events/global.js:46 events/global.js:63 events/room.js:147
+#: events/room.js:167 events/room.js:187
+msgid "leave"
+msgstr "离开"
+
+#: events/global.js:53
+msgid "the man says he's grateful. says he won't come around any more."
+msgstr "这家伙感激涕零,说他再也不会来行窃了"
+
+#: events/global.js:54
+msgid "shares what he knows about sneaking before he goes."
+msgstr "在离开前他分享了有关潜行的心得"
+
+#: events/outside.js:10
+msgid "A Ruined Trap"
+msgstr "损毁的陷阱"
+
+#: events/outside.js:17
+msgid "some of the traps have been torn apart."
+msgstr "一些陷阱损毁了"
+
+#: events/outside.js:18
+msgid "large prints lead away, into the forest."
+msgstr "巨大的足印延伸至森林"
+
+#: events/outside.js:24
+msgid "some traps have been destroyed"
+msgstr "一些陷阱损毁了"
+
+#: events/outside.js:28
+msgid "track them"
+msgstr "追踪"
+
+#: events/outside.js:32 events/room.js:76 events/room.js:127
+msgid "ignore them"
+msgstr "忽略"
+
+#: events/outside.js:39
+msgid "the tracks disappear after just a few minutes."
+msgstr "数分钟后足印消失了"
+
+#: events/outside.js:40
+msgid "the forest is silent."
+msgstr "森林归于静谧"
+
+#: events/outside.js:42
+msgid "nothing was found"
+msgstr "找不到任何物品"
+
+#: events/outside.js:45 events/outside.js:63 events/outside.js:128
+#: events/outside.js:146 events/outside.js:199 events/outside.js:217
+#: events/outside.js:250 events/outside.js:284 events/room.js:298
+#: events/room.js:316
+msgid "go home"
+msgstr "返回"
+
+#: events/outside.js:52
+msgid "not far from the village lies a large beast, its fur matted with blood."
+msgstr "村外不远处躺着一只巨兽，它的毛皮上染满了鲜血"
+
+#: events/outside.js:53
+msgid "it puts up little resistance before the knife."
+msgstr "它无力挣扎任人宰割"
+
+#: events/outside.js:55
+msgid "there was a beast. it's dead now"
+msgstr "野兽死了"
+
+#: events/outside.js:71
+msgid "Fire"
+msgstr "着火了"
+
+#: events/outside.js:78
+msgid "a fire rampages through one of the huts, destroying it."
+msgstr "你的小屋要起火了,快扑灭它"
+
+#: events/outside.js:79
+msgid "all residents in the hut perished in the fire."
+msgstr "不幸的是,屋内的所有人都死于火灾中"
+
+#: events/outside.js:81
+msgid "a fire has started"
+msgstr "火灾已经开始"
+
+#: events/outside.js:88
+msgid "mourn"
+msgstr "护甲"
+
+#: events/outside.js:89
+msgid "some villagers have died"
+msgstr "有一些村民死掉了"
+
+#: events/outside.js:97
+msgid "Sickness"
+msgstr "瘟疫"
+
+#: events/outside.js:104
+msgid "a sickness is spreading through the village."
+msgstr "瘟疫在村子中蔓延"
+
+#: events/outside.js:105 events/outside.js:163
+msgid "medicine is needed immediately."
+msgstr "亟需药剂"
+
+#: events/outside.js:107
+msgid "some villagers are ill"
+msgstr "有一些村民死掉了"
+
+#: events/outside.js:111
+msgid "1 medicine"
+msgstr "1支药剂"
+
+#: events/outside.js:116
+msgid "ignore it"
+msgstr "放任不管"
+
+#: events/outside.js:123
+msgid "the sickness is cured in time."
+msgstr "疫病及时得到了控制"
+
+#: events/outside.js:125
+msgid "sufferers are healed"
+msgstr "遭难的人被治愈了"
+
+#: events/outside.js:135
+msgid "the sickness spreads through the village."
+msgstr "瘟疫在村子中蔓延"
+
+#: events/outside.js:136
+msgid "the days are spent with burials."
+msgstr "葬礼接着葬礼"
+
+#: events/outside.js:137 events/outside.js:207
+msgid "the nights are rent with screams."
+msgstr "尖叫响彻黑夜"
+
+#: events/outside.js:139
+msgid "sufferers are left to die"
+msgstr "遭难的人被留下等死"
+
+#: events/outside.js:155
+msgid "Plague"
+msgstr "黑死病"
+
+#: events/outside.js:162
+msgid "a terrible plague is fast spreading through the village."
+msgstr "可怕的黑死病迅速地在村子里传播开来"
+
+#: events/outside.js:165
+msgid "a plague afflicts the village"
+msgstr "黑死病席卷村落"
+
+#: events/outside.js:170
+msgid "buy medicine"
+msgstr "购买药剂"
+
+#: events/outside.js:176
+msgid "5 medicine"
+msgstr "5支药剂"
+
+#: events/outside.js:181
+msgid "do nothing"
+msgstr "置之不理"
+
+#: events/outside.js:188
+msgid "the plague is kept from spreading."
+msgstr "黑死病得到了控制"
+
+#: events/outside.js:189
+msgid "only a few die."
+msgstr "只有少数人死去"
+
+#: events/outside.js:190
+msgid "the rest bury them."
+msgstr "剩下的人埋葬了他们"
+
+#: events/outside.js:192
+msgid "epidemic is eradicated eventually"
+msgstr "疫情终于被根除"
+
+#: events/outside.js:206
+msgid "the plague rips through the village."
+msgstr "黑死病席卷村落"
+
+#: events/outside.js:208
+msgid "the only hope is a quick death."
+msgstr "人们只求速死"
+
+#: events/outside.js:210
+msgid "population is almost exterminated"
+msgstr "人类差一点灭绝"
+
+#: events/outside.js:226
+msgid "A Beast Attack"
+msgstr "野兽来袭"
+
+#: events/outside.js:233
+msgid "a pack of snarling beasts pours out of the trees."
+msgstr "一群咆哮的野兽冲出丛林"
+
+#: events/outside.js:234
+msgid "the fight is short and bloody, but the beasts are repelled."
+msgstr "战斗短暂而血腥，但兽群溃退了"
+
+#: events/outside.js:235
+msgid "the villagers retreat to mourn the dead."
+msgstr "村民撤了回来，悼念那些死去的人"
+
+#: events/outside.js:237
+msgid "wild beasts attack the villagers"
+msgstr "野兽袭击村民"
+
+#: events/outside.js:251
+msgid "predators become prey. price is unfair"
+msgstr "猎手变成猎物. 价格不公"
+
+#: events/outside.js:260
+msgid "A Military Raid"
+msgstr "军事突袭"
+
+#: events/outside.js:267
+msgid "a gunshot rings through the trees."
+msgstr "枪声啸过树林"
+
+#: events/outside.js:268
+msgid "well armed men charge out of the forest, firing into the crowd."
+msgstr "装备精良的人冲出树林，向人群射击"
+
+#: events/outside.js:269
+msgid "after a skirmish they are driven away, but not without losses."
+msgstr "虽然他们撤走了，但我们好些人牺牲了"
+
+#: events/outside.js:271
+msgid "troops storm the village"
+msgstr "黑死病席卷村落"
+
+#: events/outside.js:285
+msgid "warfare is bloodthirsty"
+msgstr "战争变得嗜血"
+
 #: events/room.js:11
 msgid "The Nomad"
 msgstr "游牧部落"
@@ -747,10 +1024,6 @@ msgstr "古怪的声响透过墙壁传来"
 msgid "investigate"
 msgstr "调查"
 
-#: events/room.js:76 events/room.js:127
-msgid "ignore them"
-msgstr "忽略"
-
 #: events/room.js:83
 msgid "vague shapes move, just out of sight."
 msgstr "模糊的身影掠过，消失在视野外"
@@ -791,10 +1064,6 @@ msgstr "有些木头不见了"
 #: events/room.js:135
 msgid "the ground is littered with small scales"
 msgstr "地上散落着小鳞片"
-
-#: events/room.js:147 events/room.js:167 events/room.js:187
-msgid "leave"
-msgstr "离开"
 
 #: events/room.js:155
 msgid "the ground is littered with small teeth"
@@ -867,10 +1136,6 @@ msgstr ""
 #: events/room.js:293 events/room.js:295
 msgid "the shady builder has made off with your wood"
 msgstr ""
-
-#: events/room.js:298 events/room.js:316
-msgid "go home"
-msgstr "返回"
 
 #: events/room.js:305 events/room.js:307
 msgid "the shady builder builds a hut"

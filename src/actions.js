@@ -56,40 +56,141 @@ const actions = {
     collectIncome () {
         store.dispatch('collectIncome')
     },
-    destroyHuts (num, allowEmpty) {
-        const _HUT_ROOM = 4;
 
-		var dead = 0;
-		for(var i = 0; i < num; i++){
-			var population = store.state.population || 0;
-			var rate = population / _HUT_ROOM;
-			var full = Math.floor(rate);
-			// by default this is used to destroy full or half-full huts
-			// pass allowEmpty to include empty huts in the armageddon
-			var huts = (allowEmpty) ? (store.state.buildings.hut || 0) : Math.ceil(rate);
-			if(!huts) {
-				break;
+    startThieves: function() {
+        this.setValue('thieves', 1);
+        this.setValue('income.thieves', {
+			delay: 10,
+			stores: {
+				'wood': -10,
+				'fur': -5,
+				'meat': -5
 			}
-			// random can be 0 but not 1; however, 0 as a target is useless
-			var target = Math.floor(Math.random() * huts) + 1;
-			var inhabitants = 0;
-			if(target <= full){
-				inhabitants = _HUT_ROOM;
-			} else if(target == full + 1){
-				inhabitants = population % _HUT_ROOM;
-			}
-            
-            this.changeValue('buildings.hut', -1)
+		});
+    },
 
+    login() {
+        return new Promise((resolve, reject) => {
+            wx.login({
+                success: res => {
+                // 发送 res.code 到后台换取 openId, sessionKey, unionId
+                    wx.request({
+                        url: 'https://hzls.miemie001.com/adarkroom/api/login',
+                        method:'post',
+                        data: {
+                            code:res.code
+                        },
+                        header: {
+                            'content-type': 'application/x-www-form-urlencoded'
+                        },
+                        success: function (res) {
+                            wx.setStorageSync('tokens', res.data)
+                            resolve()
+                        },
+                        fail: function (error) {
+                            wx.showToast({
+                                title: '登陆失败，' + JSON.stringify(error),
+                                icon: 'none',
+                                duration: 2000
+                            })
+                            reject();
+                        }
+                    });
+                },
+                fail: res => {
+                    wx.showToast({
+                        title: '登陆失败，登陆接口错误',
+                        icon: 'none',
+                        duration: 2000
+                    })
+                    reject();
+                    
+                }
+            })
+        })
+    },
 
-			if(inhabitants){
-				killVillagers(inhabitants);
-				dead += inhabitants;
-			}
-		}
-		// this method returns the total number of victims, for further actions
-		return dead;
-	},
+    saveProgress(data) {
+        const tokens = wx.getStorageSync('tokens')
+
+        wx.request({
+            url: 'https://hzls.miemie001.com/adarkroom/api/progress/save',
+            method:'post',
+            data: {
+                openid: tokens.openid,
+                data: JSON.stringify(data)
+            },
+            header: {
+                'content-type': 'application/x-www-form-urlencoded'
+            },
+            success: (res) => {
+
+            },
+            fail() {
+                wx.showToast({
+                    title: '进度保存失败',
+                    icon: 'none',
+                    duration: 2000
+                })
+            }
+        });
+    },
+
+    loadProgress() {
+        const tokens = wx.getStorageSync('tokens')
+
+        wx.request({
+            url: 'https://hzls.miemie001.com/adarkroom/api/progress/load',
+            method:'post',
+            data: {
+                openid: tokens.openid
+            },
+            header: {
+                'content-type': 'application/x-www-form-urlencoded'
+            },
+            success: (res) => {
+                if (res.data.errcode === 0) {
+                    try {
+                        const state = JSON.parse(res.data.result);
+                        store.replaceState(state)
+                    } catch(e) {
+                        wx.showToast({
+                            title: '进度载入失败，格式解析错误',
+                            icon: 'none',
+                            duration: 2000
+                        })
+                    }
+                }
+            },
+            fail() {
+                wx.showToast({
+                    title: '进度载入失败',
+                    icon: 'none',
+                    duration: 2000
+                })
+            }
+        });
+    },
+    
+    bootstrap() {
+        const tokens = wx.getStorageSync('tokens')
+
+        // if (!tokens) {
+            this.login()
+            .then(() => {
+                this.loadProgress();
+            }).catch(() => {
+                // wx.showToast({
+                //     title: '登陆失败',
+                //     icon: 'none',
+                //     duration: 2000
+                // })
+            })
+            return;
+        // }
+
+        // this.loadProgress();
+    }
 }
 
 export default actions

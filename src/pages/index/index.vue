@@ -1,6 +1,8 @@
 <template>
-  <div class="container" :class="theme">
+  <div v-if="bootstraping">
 
+  </div>
+  <div v-else class="container" :class="theme">
     <div class="tab">
       <div class="tab-item" @click="tabClick(0)" :class="{active: currentTab === 0}">{{roomTitle}}</div>
       <div class="tab-item" v-if="level > 0" @click="tabClick(1)" :class="{active: currentTab === 1}">{{outsideTitle}}</div>
@@ -64,6 +66,10 @@ export default {
       return store.state.message
     },
 
+    bootstraping() {
+      return store.state.bootstraping
+    },
+
     level() {
       return store.state.level
     },
@@ -108,16 +114,27 @@ export default {
   },
 
   created() {
+    actions.bootstrap();
+
     this.unsubscribeStore = store.subscribe((mutation, state) => {
+
       if (mutation.type === 'changeTheme') {
         this.setNavigationBarColor(mutation.payload);
       }
 
       // save game state
-      wx.setStorageSync('game', Object.assign({}, state, {
-        currentTab: 0,
-        message: null
-      }))
+      // wx.setStorageSync('game', )
+
+      if (this.saveProgressTimer) {
+        return;
+      }
+
+      this.saveProgressTimer = 1
+      this.saveProgress();
+
+      setTimeout(() => {
+        this.saveProgressTimer = 0
+      }, 3000)
     });
 
     this.setNavigationBarColor(store.state.theme);
@@ -133,6 +150,15 @@ export default {
   },
 
   methods: {
+
+    saveProgress() {
+      actions.saveProgress(Object.assign({}, store.state, {
+        currentTab: 0,
+        message: null,
+        killVillagersNum: -1,
+        destroyHutsNum: -1
+      }))
+    },
 
     setNavigationBarColor(value) {
       let backgroundColor;

@@ -5,6 +5,7 @@
 <script>
 import tdialog from './Dialog'
 import RoomEvents from '../events/room'
+import OutsideEvents from '../events/outside'
 import actions from '../actions'
 
 const _EVENT_TIME_RANGE = [3, 6]; // range, in minutes
@@ -18,7 +19,7 @@ export default {
           zanDialog: {},
           show: false,
           eventStack: [],
-          EventPool: [].concat(RoomEvents)
+          EventPool: [].concat(RoomEvents, OutsideEvents)
       }
   },
 
@@ -125,7 +126,8 @@ export default {
         this.zanDialog = {
           title: scene.title,
           content: scene.text,
-          buttons: scene.buttons
+          buttons: scene.buttons,
+          buttonsShowVertical: true
         }
 
       var leaveBtn = false;

@@ -104,10 +104,10 @@ const TradeGoods = {
         type: 'special',
         maximum: 1,
         cost: function() {
-            return { 
-                fur: 400, 
-                scales: 20, 
-                teeth: 10 
+            return {
+                fur: 400,
+                scales: 20,
+                teeth: 10
             };
         }
     }
