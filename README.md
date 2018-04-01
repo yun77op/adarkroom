@@ -1,6 +1,12 @@
 # adarkroom
 
-> a dark room
+> 小黑屋小程序
+
+## 简介
+
+源码基于vue，使用mpvue转换成小程序
+
+逻辑参考 https://github.com/doublespeakgames/adarkroom
 
 ## Build Setup
 
@@ -17,5 +23,3 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
